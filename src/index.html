@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#071526" />
+    <title>FlipPlay — Dive Into Stories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+
+    <header class="header" id="header">
+      <nav class="nav">
+        <!-- LOGO -->
+        <a class="brand" href="#home">
+          <span class="brand-icon">F</span>flip<span class="brand-blue">
+            play</span>
+          </a>
+        <!-- NAVBAR -->
+        <div class="nav-links" id="nav-links">
+          <a href="#home">Home</a><a href="#discover">Discover</a>
+          <a href="#vibe-grid">Vibe Grid</a><a href="#about">About</a>
+        </div>
+
+        <a class="nav-cta" href="#discover">Explore universe</a>
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-label="Buka navigasi">
+          ☰
+        </button>
+      </nav>
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="#home">Home</a><a href="#discover">Discover</a
+        ><a href="#vibe-grid">Vibe Grid</a><a href="#about">About</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-shade"></div>
+        <div class="page hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">✦ YOUR DIGITAL ENTERTAINMENT SPACE</p>
+            <h1>Dive into<br /><span class="gradient">another world.</span></h1>
+            <p class="lead">
+              A universe of anime, films, series, manga, and stories made for
+              every version of you.
+            </p>
+            <div class="actions">
+              <a class="btn primary" href="#discover">Explore the universe</a>
+              <a class="btn ghost" href="#about">▶ Discover FlipPlay</a>
+            </div>
+            <div class="stats">
+              <div>
+                <b>01<span>.</span></b
+                ><small>Watch your way</small>
+              </div>
+              <div>
+                <b>02<span>.</span></b
+                ><small>Read your world</small>
+              </div>
+              <div>
+                <b>03<span>.</span></b
+                ><small>Find your next story</small>
+              </div>
+            </div>
+          </div>
+          <!-- SEBELAH KANAN -->
+<div class="showcase">
+            <div class="poster-back left">
+              <img
+                src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80"
+                alt=""
+              />
+            </div>
+            <div class="poster-back right">
+              <img
+                src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=600&q=80"
+                alt=""
+              />
+            </div>
+            <article class="feature">
+              <img
+                src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=85"
+                alt="Fantasy landscape"
+              />
+              <div class="feature-shade"></div>
+              <div class="feature-text">
+                <small>FEATURED UNIVERSE</small>
+                <h2>Beyond<br />the ordinary.</h2>
+                <p>Your next obsession is one click away.</p>
+              </div>
+            </article>
+            <div class="float-note">
+              ✧
+              <span
+                ><b>Curated for your mood</b
+                ><small>Stories that feel like you</small></span
+              >
+            </div>
+          </div>
+        
+        </div>
+        <a class="scroll" href="#discover">SCROLL TO EXPLORE ↓</a>
+      </section>
+
+      <!-- DISCOVER -->
+      <section class="section" id="discover">
+        <div class="page">
+          <div class="heading">
+            <div>
+              <p class="kicker">THE FLIPPLAY UNIVERSE</p>
+              <h2>Pick your <span class="gradient">next escape.</span></h2>
+            </div>
+            <p>Choose your path through stories, characters, and worlds worth getting lost in.</p>
+          </div>
+
+          <!-- CARD 01 -->
+          <div class="world-grid">
+            <article class="world-card">
+              <div class="world-img">
+                <img src="assets/anime.jpg" alt="Anime world" loading="lazy"/><span>01 / ANIME</span>
+              </div>
+              <div class="world-copy">
+                <small>WATCH / DISCOVER</small>
+                <h3>ANIME</h3>
+                <p>Anime adventures and unforgettable characters for your next marathon.</p>
+                <a href="#vibe-grid">Explore anime</a>
+              </div>
+            </article>
+
+            <!-- CARD 02 -->
+            <article class="world-card">
+              <div class="world-img">
+                <img src="assets/drama.jpg" alt="Anime world" loading="lazy"/><span>02 / DRAMA</span>
+              </div>
+              <div class="world-copy">
+                <small>WATCH / FEEL</small>
+                <h3>DRAMA</h3>
+                <p>Step into cinematic stories that stay with you long after the ending.</p>
+                <a href="#vibe-grid">Find a story</a>
+              </div>
+            </article>
+
+            <!-- CARD 03 -->
+            <article class="world-card">
+              <div class="world-img">
+                <img src="assets/manga.jpg" alt="Anime world" loading="lazy"/><span>03 / MANGA</span>
+              </div>
+              <div class="world-copy">
+                <small>READ / IMAGINE</small>
+                <h3>MANGA</h3>
+                <p>Discover manga one chapter at a time.</p>
+                <a href="#vibe-grid">Start reading</a>
+              </div>
+            </article>
+
+            <!-- CARD 04 -->
+            <article class="world-card">
+              <div class="world-img">
+                <img src="assets/manhua.jpg" alt="Anime world" loading="lazy"/><span>04 / MANHUA</span>
+              </div>
+              <div class="world-copy">
+                <small>READ / IMAGINE</small>
+                <h3>MANHUA</h3>
+                <p>Discover manga, manhua, and novels one chapter at a time.</p>
+                <a href="#vibe-grid">Start reading</a>
+              </div>
+            </article>
+
+            <!-- CARD 05 -->
+            <article class="world-card">
+              <div class="world-img">
+                <img src="assets/movie.jpg" alt="Anime world" loading="lazy"/><span>05 / MOVIE</span>
+              </div>
+              <div class="world-copy">
+                <small>WATCH / DISCOVER</small>
+                <h3>MOVIE</h3>
+                <p>Tonton movie sepuasnya.</p>
+                <a href="#vibe-grid">Start reading</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEARCHING -->
+      <section class="section vibe" id="vibe-grid">
+        <div class="page">
+          <div class="heading">
+            <div>
+              <p class="kicker">AURA-BASED DISCOVERY</p>
+              <h2>Find your <span class="gradient">current vibe.</span></h2>
+            </div>
+            <p>Let your mood choose the next story. Search the library or explore by aura.</p>
+          </div>
+          <!-- SEARCH FITUR -->
+          <label class="search">
+            <span>⌕</span>
+            <input id="anime-search" type="search" placeholder="Search an anime title..." autocomplete="off"/><small>LIVE SEARCH</small>
+          </label>
+          <div class="filters">
+            <button class="chip selected" data-aura="all" aria-pressed="true">
+              ✧ All vibes
+            </button>
+            <button class="chip" data-aura="energy" aria-pressed="false">
+              ⚡ High energy
+            </button>
+            <button class="chip" data-aura="melancholy" aria-pressed="false">
+              ☾ Melancholy
+            </button>
+            <button class="chip" data-aura="binge" aria-pressed="false">
+              ◷ Binge Mode
+            </button>
+          </div>
+
+          <!-- ANIME CARD -->
+          <div class="library-meta">
+            <p id="anime-status" role="status" aria-live="polite">
+              Memuat daftar anime...
+            </p>
+            <small>THE ANIME ARCHIVE</small>
+          </div>
+          <div id="anime-grid" class="anime-grid"></div>
+          <button id="anime-more" class="btn ghost more hidden">
+            Show more stories ↓
+          </button>
+          <button id="anime-retry" class="btn primary retry hidden">
+            Try again ↻
+          </button>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section about" id="about">
+        <div class="page about-layout">
+          <div>
+            <p class="kicker">MORE THAN A PLATFORM</p>
+            <h2>Made for the<br /><span class="gradient">story seekers.</span></h2>
+            <p>FlipPlay is a concept entertainment platform bringing watching and reading into one intuitive, expressive, and comfortable space.</p>
+            <p>It is not just about finding what to watch next. It is about finding a story that matches your mood.</p>
+            <a class="btn primary" href="#discover">Find your story</a>
+          </div>
+          <div class="about-art">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1100&q=85" alt="Dreamlike fantasy landscape"/>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="page footer-grid">
+        <div>
+          <a class="brand" href="#home">
+            <span class="brand-icon">F</span>flip<span class="brand-blue">play</span>
+          </a>
+          <p>Your digital entertainment space. Watch, read, and discover your next favorite story.</p>
+        </div>
+        <!-- SISI TENGAH -->
+        <div>
+          <b>Explore</b>
+          <a href="#home">Home</a>
+          <a href="#discover">Discover</a>
+          <a href="#vibe-grid">Vibe Grid</a>
+        </div>
+        <!-- SISI KANAN -->
+        <div>
+          <b>Connect</b>
+          <p>Ideas, questions, or a collaboration in mind?</p>
+          <a class="email" href="mailto:alifia@premor.net">alifia@premor.net</a>
+        </div>
+      </div>
+      <div class="page footer-bottom">
+        <span>© <span id="year"></span> FlipPlay. All stories, one space.</span>
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </footer>
+    
+    <!-- SCRIPT JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

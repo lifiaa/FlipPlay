@@ -1,0 +1,1062 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --ink: #071526;
+  --panel: #102c47;
+  --ice: #eaf7ff;
+  --muted: #9bb8ce;
+  --pastel: #bfe8ff;
+  --diamond: #4fc3f7;
+  --bright: #83e5ff;
+  --radius: 20px
+}
+
+* {
+  box-sizing: border-box
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--ice);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden
+}
+
+a {
+  color: inherit;
+  text-decoration: none
+}
+
+button,
+input {
+  font: inherit
+}
+
+.page {
+  width: min(1160px, calc(100% - 48px));
+  margin: auto
+}
+
+.hidden {
+  display: none !important
+}
+
+.header {
+  position: fixed;
+  z-index: 50;
+  inset: 0 0 auto;
+  transition: background .25s, backdrop-filter .25s
+}
+
+.header.scrolled {
+  background: #071526d9;
+  backdrop-filter: blur(18px)
+}
+
+.nav {
+  height: 82px;
+  width: min(1320px, calc(100% - 48px));
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 30px
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font: 700 24px 'Space Grotesk';
+  letter-spacing: -.07em;
+  white-space: nowrap
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  color: #071526;
+  background: linear-gradient(135deg, #e7f8ff, #72d7ff);
+  font-size: 19px;
+  letter-spacing: 0
+}
+
+.brand-blue {
+  color: var(--pastel)
+}
+
+.nav-links {
+  display: flex;
+  gap: 34px;
+  margin: auto
+}
+
+.nav-links a {
+  font-size: 13px;
+  color: #a8c1d5
+}
+
+.nav-links a:hover {
+  color: white
+}
+
+.nav-cta {
+  padding: 11px 17px;
+  border-radius: 20px;
+  background: var(--ice);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700
+}
+
+.menu-toggle,
+.mobile-menu {
+  display: none
+}
+
+.hero {
+  min-height: 790px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 135px 0 85px;
+  isolation: isolate;
+  overflow: hidden
+}
+
+.hero-bg,
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -2
+}
+
+.hero-bg {
+  background: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?auto=format&fit=crop&w=2200&q=85') center/cover;
+  opacity: .45
+}
+
+.hero-shade {
+  z-index: -1;
+  background: linear-gradient(90deg, #061426 0%, #061426e0 38%, #06142655 100%), linear-gradient(0deg, var(--ink), transparent 42%)
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 55px
+}
+
+.eyebrow,
+.kicker {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  color: var(--bright)
+}
+
+.eyebrow {
+  margin: 0 0 24px
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Space Grotesk', sans-serif
+}
+
+h1 {
+  font-size: clamp(50px, 6vw, 80px);
+  line-height: 1;
+  letter-spacing: -.065em;
+  margin: 0 0 23px
+}
+
+.gradient {
+  color: transparent;
+  background: linear-gradient(105deg, #e9f9ff, #a9eaff 40%, #55c9fa 76%, #bceeff);
+  background-clip: text;
+  -webkit-background-clip: text
+}
+
+.lead {
+  max-width: 500px;
+  color: #b0c5d7;
+  line-height: 1.9;
+  font-size: 15px
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 20px;
+  min-height: 46px;
+  border: 0;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s
+}
+
+.btn:hover {
+  transform: translateY(-2px)
+}
+
+.primary {
+  color: #071526;
+  background: linear-gradient(120deg, #d9f6ff, #66d6ff);
+  box-shadow: 0 8px 25px #4fc3f729
+}
+
+.ghost {
+  color: var(--ice);
+  background: #ffffff12
+}
+
+.stats {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  border-top: 1px solid #d2eeff24;
+  margin-top: 42px;
+  padding-top: 20px
+}
+
+.stats div {
+  display: grid
+}
+
+.stats b {
+  font: 600 25px 'Space Grotesk'
+}
+
+.stats b span {
+  color: var(--diamond)
+}
+
+.stats small {
+  font-size: 10px;
+  color: #91abc0
+}
+
+.showcase {
+  min-height: 460px;
+  position: relative;
+  display: grid;
+  place-items: center
+}
+
+.feature {
+  position: relative;
+  width: min(360px, 76%);
+  height: 440px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 25px 65px #0006, 0 0 65px #4fc3f71c;
+  transform: rotate(2deg)
+}
+
+.feature>img,
+.poster-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block
+}
+
+.feature-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #03101ff0, transparent 70%)
+}
+
+.feature-text {
+  position: absolute;
+  bottom: 28px;
+  left: 24px
+}
+
+.feature-text small {
+  color: var(--bright);
+  font-size: 9px;
+  letter-spacing: .17em
+}
+
+.feature-text h2 {
+  font-size: 34px;
+  line-height: 1.05;
+  margin: 10px 0
+}
+
+.feature-text p {
+  font-size: 12px;
+  color: #c0d1df
+}
+
+.poster-back {
+  position: absolute;
+  width: 190px;
+  height: 310px;
+  overflow: hidden;
+  border-radius: 20px;
+  opacity: .68
+}
+
+.poster-back.left {
+  left: 0;
+  top: 50px;
+  transform: rotate(-10deg)
+}
+
+.poster-back.right {
+  right: 0;
+  top: 18px;
+  transform: rotate(9deg)
+}
+
+.float-note {
+  position: absolute;
+  right: -5px;
+  bottom: 10px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 17px;
+  border-radius: 20px;
+  background: #092039df;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 15px 35px #0004;
+  color: var(--bright)
+}
+
+.float-note b,
+.float-note small {
+  display: block
+}
+
+.float-note b {
+  color: white;
+  font-size: 11px
+}
+
+.float-note small {
+  color: var(--muted);
+  font-size: 10px
+}
+
+.scroll {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  letter-spacing: .18em;
+  color: #83a4bd;
+  white-space: nowrap
+}
+
+.section {
+  padding: 105px 0
+}
+
+.section:nth-child(2) {
+  background: linear-gradient(180deg, var(--ink), #091c30 70%, var(--ink))
+}
+
+.heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px
+}
+
+.kicker {
+  margin: 0 0 12px
+}
+
+.heading h2,
+.about h2 {
+  font-size: clamp(35px, 4.2vw, 53px);
+  line-height: 1.08;
+  letter-spacing: -.055em;
+  margin: 0
+}
+
+.heading>p {
+  max-width: 350px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 0 0 4px
+}
+
+.world-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 43px
+}
+
+.world-card,
+.anime-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 20px;
+  background: linear-gradient(150deg, #12334f, #0b2036);
+  box-shadow: 0 15px 36px #0002;
+  transition: transform .25s, box-shadow .25s
+}
+
+.world-card:hover,
+.anime-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px #0004, 0 0 24px #4fc3f714
+}
+
+.world-img {
+  height: 245px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0
+}
+
+.world-img:after {
+  content: '';
+  position: absolute;
+  inset: 30% 0 0;
+  background: linear-gradient(0deg, #051426a8, transparent)
+}
+
+.world-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s
+}
+
+.world-card:hover .world-img img {
+  transform: scale(1.05)
+}
+
+.world-img span {
+  position: absolute;
+  z-index: 1;
+  left: 15px;
+  top: 15px;
+  padding: 6px 9px;
+  border-radius: 20px;
+  background: #071526a8;
+  font-size: 9px;
+  letter-spacing: .12em
+}
+
+.world-copy {
+  padding: 22px
+}
+
+.world-copy small {
+  font-size: 9px;
+  letter-spacing: .15em;
+  color: var(--diamond)
+}
+
+.world-copy h3 {
+  margin: 8px 0;
+  font-size: 22px
+}
+
+.world-copy p {
+  min-height: 45px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8
+}
+
+.world-copy>a {
+  font-size: 11px;
+  color: var(--bright);
+  font-weight: 700
+}
+
+.vibe {
+  position: relative;
+  background: radial-gradient(ellipse at 50% 0, #1d689126, transparent 48%), linear-gradient(#091c30, #071526)
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 34px;
+  padding: 0 19px;
+  min-height: 60px;
+  border-radius: 20px;
+  background: #102b44;
+  box-shadow: 0 10px 30px #0002
+}
+
+.search>span {
+  font-size: 28px;
+  color: var(--bright)
+}
+
+.search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: white;
+  font-size: 14px
+}
+
+.search input::placeholder {
+  color: #7896ae
+}
+
+.search small {
+  flex-shrink: 0;
+  color: #688ba5;
+  font-size: 9px;
+  letter-spacing: .12em
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 20px 0 27px
+}
+
+.chip {
+  border: 0;
+  border-radius: 20px;
+  padding: 11px 15px;
+  background: #112c45;
+  color: #b3c8d9;
+  font-size: 11px;
+  cursor: pointer;
+  transition: .2s
+}
+
+.chip:hover {
+  background: #1a405d;
+  color: white
+}
+
+.chip.selected {
+  background: linear-gradient(120deg, #d9f6ff, #62d4fb);
+  color: #06182a
+}
+
+.library-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin: 12px 0 20px
+}
+
+.library-meta p {
+  margin: 0;
+  color: #a8c2d5;
+  font-size: 12px
+}
+
+.library-meta small {
+  color: #5e819b;
+  font-size: 9px;
+  letter-spacing: .14em
+}
+
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 19px
+}
+
+.anime-poster {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(135deg, #163a58, #0c2137)
+}
+
+.anime-poster img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s
+}
+
+.anime-card:hover .anime-poster img {
+  transform: scale(1.04)
+}
+
+.anime-poster img.image-failed {
+  visibility: hidden
+}
+
+.poster-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 18px;
+  background: radial-gradient(circle at 50% 35%, #4fc3f738, transparent 50%), linear-gradient(145deg, #173f5e, #0b1d31);
+  font: 600 16px 'Space Grotesk'
+}
+
+.poster-fallback span {
+  display: block;
+  color: var(--bright);
+  font-size: 9px;
+  letter-spacing: .14em;
+  margin-top: 10px
+}
+
+.score {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  padding: 6px 9px;
+  border-radius: 20px;
+  background: #041220c9;
+  color: #d8f6ff;
+  font-size: 10px;
+  font-weight: 700
+}
+
+.anime-info {
+  padding: 16px
+}
+
+.anime-type {
+  color: var(--diamond);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin: 0 0 6px
+}
+
+.anime-info h3 {
+  font-size: 14px;
+  line-height: 1.45;
+  min-height: 42px;
+  margin: 0 0 8px
+}
+
+.anime-info p {
+  color: #91adc2;
+  font-size: 10px;
+  margin: 0 0 12px
+}
+
+.anime-link {
+  color: var(--bright);
+  font-size: 11px;
+  font-weight: 700
+}
+
+.more,
+.retry {
+  display: flex;
+  margin: 28px auto 0
+}
+
+.about {
+  background: linear-gradient(180deg, #071526, #0a2035)
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  align-items: center;
+  gap: 80px
+}
+
+.about h2 {
+  margin-bottom: 24px
+}
+
+.about-copy,
+.about-layout>div:first-child>p:not(.kicker) {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2
+}
+
+.about .btn {
+  margin-top: 14px
+}
+
+.about-art {
+  position: relative;
+  padding: 0 20px 32px 0
+}
+
+.about-art img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px #0004
+}
+
+.about-art small {
+  display: block;
+  margin-top: 12px;
+  color: #7093ac;
+  font-size: 8px;
+  letter-spacing: .13em
+}
+
+.stamp {
+  position: absolute;
+  right: 0;
+  bottom: 78px;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #d8f7ff, #6ed8ff);
+  color: #092039;
+  font: 700 14px/1.25 'Space Grotesk';
+  box-shadow: 0 12px 35px #0004;
+  transform: rotate(4deg)
+}
+
+footer {
+  padding: 55px 0 22px;
+  background: #05111f
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr .7fr 1fr;
+  gap: 45px;
+  padding-bottom: 35px
+}
+
+.footer-grid p {
+  max-width: 300px;
+  color: #7895ad;
+  font-size: 12px;
+  line-height: 1.9
+}
+
+.footer-grid b {
+  display: block;
+  margin-bottom: 13px;
+  font-size: 13px
+}
+
+.footer-grid>div>a:not(.brand):not(.email) {
+  display: block;
+  margin: 9px 0;
+  color: #8ea9be;
+  font-size: 12px
+}
+
+.email {
+  color: var(--bright);
+  font-size: 12px
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff12;
+  color: #648098;
+  font-size: 10px
+}
+
+.footer-bottom a {
+  color: #a8c6db
+}
+
+@media(max-width:1000px) {
+  .hero-layout {
+    gap: 25px
+  }
+
+  .anime-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+  }
+
+  .about-layout {
+    gap: 45px
+  }
+
+  .poster-back {
+    width: 155px
+  }
+}
+
+@media(max-width:760px) {
+  .page {
+    width: calc(100% - 36px)
+  }
+
+  .nav {
+    height: 72px;
+    width: calc(100% - 36px)
+  }
+
+  .nav-links,
+  .nav-cta {
+    display: none
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    border: 0;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    background: #ffffff12;
+    color: white;
+    font-size: 22px
+  }
+
+  .mobile-menu.open {
+    position: absolute;
+    display: grid;
+    gap: 4px;
+    top: 76px;
+    left: 18px;
+    right: 18px;
+    padding: 12px;
+    border-radius: 20px;
+    background: #081d31f5;
+    box-shadow: 0 18px 50px #0005;
+    backdrop-filter: blur(16px)
+  }
+
+  .mobile-menu a {
+    padding: 12px 14px;
+    border-radius: 20px;
+    color: #c6dced;
+    font-size: 13px
+  }
+
+  .mobile-menu a:hover {
+    background: #4fc3f71f
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 120px 0 78px
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 40px
+  }
+
+  h1 {
+    font-size: clamp(48px, 12vw, 68px)
+  }
+
+  .lead {
+    font-size: 14px
+  }
+
+  .stats {
+    gap: 18px;
+    margin-top: 30px
+  }
+
+  .stats b {
+    font-size: 22px
+  }
+
+  .showcase {
+    min-height: 390px
+  }
+
+  .feature {
+    width: 65%;
+    height: 370px
+  }
+
+  .poster-back {
+    width: 40%;
+    height: 270px
+  }
+
+  .poster-back.left {
+    left: 3%
+  }
+
+  .poster-back.right {
+    right: 3%
+  }
+
+  .float-note {
+    right: 0;
+    bottom: 0
+  }
+
+  .section {
+    padding: 76px 0
+  }
+
+  .heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px
+  }
+
+  .heading>p {
+    max-width: 500px
+  }
+
+  .world-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+    margin-top: 30px
+  }
+
+  .world-img {
+    height: 250px
+  }
+
+  .world-copy p {
+    min-height: 0
+  }
+
+  .anime-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px
+  }
+
+  .anime-info {
+    padding: 12px
+  }
+
+  .anime-info h3 {
+    font-size: 12px;
+    min-height: 52px
+  }
+
+  .search small,
+  .library-meta small {
+    display: none
+  }
+
+  .chip {
+    padding: 10px 12px;
+    font-size: 10px
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 38px
+  }
+
+  .about-art img {
+    height: 340px
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 22px
+  }
+
+  .footer-grid>div:first-child {
+    grid-column: 1/-1
+  }
+}
+
+@media(max-width:400px) {
+  .page {
+    width: calc(100% - 28px)
+  }
+
+  .brand {
+    font-size: 22px
+  }
+
+  .actions {
+    flex-direction: column
+  }
+
+  .actions .btn {
+    width: 100%
+  }
+
+  .stats {
+    gap: 12px
+  }
+
+  .stats small {
+    font-size: 9px
+  }
+
+  .feature {
+    width: 72%
+  }
+
+  .feature-text h2 {
+    font-size: 28px
+  }
+
+  .anime-grid {
+    gap: 9px
+  }
+
+  .anime-info {
+    padding: 10px
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr
+  }
+
+  .footer-grid>div:first-child {
+    grid-column: auto
+  }
+
+  .footer-bottom {
+    flex-direction: column
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important
+  }
+}
